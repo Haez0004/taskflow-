@@ -16,9 +16,9 @@
 - [x] Push to GitHub
 
 ### Day 2: The reducer
-- [ ] Create lib/taskReducer.ts
-- [ ] Actions: ADD, EDIT, DELETE, MOVE
-- [ ] Keep the reducer pure
+- [x] Create lib/taskReducer.ts
+- [x] Actions: ADD, EDIT, DELETE, MOVE
+- [x] Keep the reducer pure
 
 ### Day 3: Reducer tests (Vitest)
 - [ ] Install and configure Vitest
