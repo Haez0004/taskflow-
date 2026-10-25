@@ -52,9 +52,9 @@
 ## Week 2: Accessibility, persistence, polish, ship
 
 ### Day 8: Drag and drop
-- [ ] Add @dnd-kit
-- [ ] Keep buttons as the non-drag fallback
-- [ ] Dispatch MOVE on drop
+- [x] Add @dnd-kit
+- [x] Keep buttons as the non-drag fallback
+- [x] Dispatch MOVE on drop
 
 ### Day 9: Accessibility
 - [ ] Full keyboard navigation

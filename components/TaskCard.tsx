@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useDraggable } from "@dnd-kit/core";
 import { Task } from "@/types";
 import { useTasks } from "@/components/TaskProvider";
 import { COLUMNS, STATUS_LABELS } from "@/lib/statuses";
@@ -14,6 +15,19 @@ export default function TaskCard({ task }: { task: Task }) {
   const [mode, setMode] = useState<"view" | "edit" | "confirm">("view");
   const [draft, setDraft] = useState(task.title);
   const [error, setError] = useState("");
+
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    setActivatorNodeRef,
+    transform,
+    isDragging,
+  } = useDraggable({ id: task.id, disabled: mode !== "view" });
+
+  const style = transform
+    ? { transform: `translate3d(${transform.x}px, ${transform.y}px, 0)` }
+    : undefined;
 
   function cancelEdit() {
     setDraft(task.title);
@@ -95,8 +109,26 @@ export default function TaskCard({ task }: { task: Task }) {
   }
 
   return (
-    <li className={li}>
-      <p className="break-words">{task.title}</p>
+    <li
+      ref={setNodeRef}
+      style={style}
+      className={`${li} ${
+        isDragging ? "relative z-50 border-cyan-400 shadow-lg shadow-black/50" : ""
+      }`}
+    >
+      <div className="flex items-start justify-between gap-2">
+        <p className="break-words">{task.title}</p>
+        <button
+          ref={setActivatorNodeRef}
+          {...attributes}
+          {...listeners}
+          type="button"
+          aria-label={`Drag: ${task.title}`}
+          className={`${btn} shrink-0 cursor-grab touch-none select-none`}
+        >
+          <span aria-hidden="true">⠿</span> Drag
+        </button>
+      </div>
       <div className="mt-3 flex flex-wrap gap-2">
         {COLUMNS.filter((c) => c.status !== task.status).map((c) => (
           <button
