@@ -21,10 +21,10 @@
 - [x] Keep the reducer pure
 
 ### Day 3: Reducer tests (Vitest)
-- [ ] Install and configure Vitest
-- [ ] One test per action
-- [ ] Edge cases: empty title, unknown id, same column
-- [ ] Add npm test script
+- [x] Install and configure Vitest
+- [x] One test per action
+- [x] Edge cases: empty title, unknown id, same column
+- [x] Add npm test script
 
 ### Day 4: State wiring
 - [ ] TaskProvider with useReducer and Context
