@@ -21,7 +21,11 @@ export default function Column({ status, title, tasks }: ColumnProps) {
         isOver ? "border-cyan-400" : "border-navy-700"
       }`}
     >
-      <h2 id={headingId} className="text-lg font-semibold text-cyan-400">
+      <h2
+       id={headingId}
+       tabIndex={-1}
+       className="text-lg font-semibold text-cyan-400 focus:outline-2 focus:outline-offset-2 focus:outline-cyan-400"
+   >
         {title}
       </h2>
       <ul className="mt-3 space-y-2">

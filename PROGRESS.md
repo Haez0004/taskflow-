@@ -57,11 +57,11 @@
 - [x] Dispatch MOVE on drop
 
 ### Day 9: Accessibility
-- [ ] Full keyboard navigation
-- [ ] ARIA labels
-- [ ] Visible focus styles
-- [ ] Focus management after add and delete
-- [ ] aria-live announcements
+- [x] Full keyboard navigation
+- [x] ARIA labels
+- [x] Visible focus styles
+- [x] Focus management after add and delete
+- [x] aria-live announcements
 
 ### Day 10: Persistence
 - [ ] Save tasks to localStorage
@@ -107,7 +107,7 @@
 | 6 | | | |
 | 7 | | | |
 | 8 | | | |
-| 9 | | | |
+| 9 | 2026-10-25 | Yes | KeyboardSensor and drag announcements, focus rings, aria-labels, live region for add and delete, focus to column heading after delete |
 | 10 | | | |
 | 11 | | | |
 | 12 | | | |

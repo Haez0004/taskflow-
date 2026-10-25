@@ -95,7 +95,10 @@ export default function TaskCard({ task }: { task: Task }) {
         <div className="mt-2 flex gap-2">
           <button
             type="button"
-            onClick={() => dispatch({ type: "DELETE", id: task.id })}
+            onClick={() => {
+         dispatch({ type: "DELETE", id: task.id });
+           document.getElementById(`column-${task.status}`)?.focus();
+         }}
             className="min-h-11 rounded-lg bg-red-300 px-4 text-sm font-semibold text-navy-950 hover:bg-red-200 focus:outline-2 focus:outline-offset-2 focus:outline-white"
           >
             Yes, delete

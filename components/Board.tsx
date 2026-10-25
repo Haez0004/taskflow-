@@ -12,6 +12,7 @@ import {
   type CollisionDetection,
   type DragEndEvent,
 } from "@dnd-kit/core";
+import { useState } from "react";
 import { useTasks } from "@/components/TaskProvider";
 import Column from "@/components/Column";
 import { COLUMNS, STATUS_LABELS } from "@/lib/statuses";
@@ -28,6 +29,15 @@ function isStatus(id: unknown): id is Status {
 
 export default function Board() {
   const { tasks, dispatch } = useTasks();
+
+const [prevCount, setPrevCount] = useState(tasks.length);
+const [message, setMessage] = useState("");
+if (tasks.length !== prevCount) {
+  setMessage(
+    `${tasks.length > prevCount ? "Task added" : "Task deleted"}. ${tasks.length} tasks total.`
+  );
+  setPrevCount(tasks.length);
+}
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
@@ -74,6 +84,10 @@ export default function Board() {
         },
       }}
     >
+    <p role="status" className="sr-only">
+      {message}
+    </p>
+
       <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
         {COLUMNS.map((col) => (
           <Column
