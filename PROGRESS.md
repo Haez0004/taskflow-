@@ -32,9 +32,9 @@
 - [x] Wrap the app in the provider
 
 ### Day 5: Board layout
-- [ ] Three columns: To do, Doing, Done
-- [ ] Responsive Tailwind grid
-- [ ] Semantic HTML
+- [x] Three columns: To do, Doing, Done
+- [x] Responsive Tailwind grid
+- [x] Semantic HTML
 
 ### Day 6: Task cards and add form
 - [ ] TaskCard component
