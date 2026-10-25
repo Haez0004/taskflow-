@@ -13,7 +13,7 @@
 - [x] Create the project with create-next-app
 - [x] Clean the starter page
 - [x] Define Task and Status types in types.ts
-- [ ] Push to GitHub
+- [x] Push to GitHub
 
 ### Day 2: The reducer
 - [ ] Create lib/taskReducer.ts
