@@ -27,9 +27,9 @@
 - [x] Add npm test script
 
 ### Day 4: State wiring
-- [ ] TaskProvider with useReducer and Context
-- [ ] useTasks() hook
-- [ ] Wrap the app in the provider
+- [x] TaskProvider with useReducer and Context
+- [x] useTasks() hook
+- [x] Wrap the app in the provider
 
 ### Day 5: Board layout
 - [ ] Three columns: To do, Doing, Done
