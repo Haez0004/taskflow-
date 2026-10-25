@@ -42,10 +42,10 @@
 - [x] Validation and error message
 
 ### Day 7: Edit, delete, move, week 1 review
-- [ ] Edit a task inline
-- [ ] Delete with confirmation
-- [ ] Move between columns with buttons
-- [ ] Refactor, lint, test, commit
+- [x] Edit a task inline
+- [x] Delete with confirmation
+- [x] Move between columns with buttons
+- [x] Refactor, lint, test, commit
 
 ---
 
