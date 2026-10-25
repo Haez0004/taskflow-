@@ -37,9 +37,9 @@
 - [x] Semantic HTML
 
 ### Day 6: Task cards and add form
-- [ ] TaskCard component
-- [ ] AddTaskForm with a proper label
-- [ ] Validation and error message
+- [x] TaskCard component
+- [x] AddTaskForm with a proper label
+- [x] Validation and error message
 
 ### Day 7: Edit, delete, move, week 1 review
 - [ ] Edit a task inline

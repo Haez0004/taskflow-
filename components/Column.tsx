@@ -1,4 +1,5 @@
 import { Task, Status } from "@/types";
+import TaskCard from "@/components/TaskCard";
 
 interface ColumnProps {
   status: Status;
@@ -18,12 +19,7 @@ export default function Column({ status, title, tasks }: ColumnProps) {
       </h2>
       <ul className="mt-3 space-y-2">
         {tasks.map((task) => (
-          <li
-            key={task.id}
-            className="rounded-lg border border-navy-700 bg-navy-800 p-3"
-          >
-            {task.title}
-          </li>
+          <TaskCard key={task.id} task={task} />
         ))}
       </ul>
     </section>
