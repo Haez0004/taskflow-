@@ -69,10 +69,10 @@
 - [x] Tests for save and load helpers
 
 ### Day 11: Features and states
-- [ ] Search or filter
-- [ ] Empty states
-- [ ] Task counts per column
-- [ ] Polish the navy and cyan theme
+- [x] Search or filter
+- [x] Empty states
+- [x] Task counts per column
+- [x] Polish the navy and cyan theme
 
 ### Day 12: Quality pass
 - [ ] Lighthouse: 100 on Accessibility, Best Practices, SEO; 90+ Performance
@@ -109,7 +109,7 @@
 | 8 | | | |
 | 9 | 2026-10-25 | Yes | KeyboardSensor and drag announcements, focus rings, aria-labels, live region for add and delete, focus to column heading after delete |
 | 10 | 2026-10-26 | Yes | localStorage save and load helpers, LOAD action, safe client load, silent announcer on load, 6 storage tests |
-| 11 | | | |
+| 11 | 2026-10-26 | Yes | Column counts, empty states, search with no-match message, theme color name, smooth drag highlight |
 | 12 | | | |
 | 13 | | | |
 | 14 | | | |

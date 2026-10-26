@@ -29,7 +29,11 @@ function isStatus(id: unknown): id is Status {
 
 export default function Board() {
   const { tasks, dispatch, loaded } = useTasks();
-
+const [query, setQuery] = useState("");
+const needle = query.trim().toLowerCase();
+const visible = needle
+  ? tasks.filter((t) => t.title.toLowerCase().includes(needle))
+  : tasks;
 const [prevCount, setPrevCount] = useState(tasks.length);
 const [message, setMessage] = useState("");
 const [prevLoaded, setPrevLoaded] = useState(loaded);
@@ -91,14 +95,28 @@ if (loaded !== prevLoaded) {
     <p role="status" className="sr-only">
       {message}
     </p>
+    <div className="mt-6">
+      <label htmlFor="task-search" className="block font-medium">
+        Search tasks
+      </label>
+      <input
+        id="task-search"
+        type="search"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Type to filter"
+        className="mt-2 w-full rounded-lg border border-navy-700 bg-navy-800 px-3 py-2 text-white placeholder:text-slate-400 focus:outline-2 focus:outline-offset-2 focus:outline-cyan-400"
+      />
+    </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
         {COLUMNS.map((col) => (
           <Column
             key={col.status}
             status={col.status}
             title={col.title}
-            tasks={tasks.filter((t) => t.status === col.status)}
+            tasks={visible.filter((t) => t.status === col.status)}
+            searching= {needle !==""}
           />
         ))}
       </div>

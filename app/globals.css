@@ -5,6 +5,7 @@
   --color-navy-900: #0a1a33;
   --color-navy-800: #112647;
   --color-navy-700: #1a3a68;
+  --color-ink: #e6f1ff;
 }
 
 html {
@@ -13,6 +14,6 @@ html {
 
 body {
   background: var(--color-navy-950);
-  color: #e6f1ff;
+    color: var(--color-ink);
   font-family: system-ui, Arial, sans-serif;
 }
