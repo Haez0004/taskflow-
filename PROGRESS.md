@@ -64,9 +64,9 @@
 - [x] aria-live announcements
 
 ### Day 10: Persistence
-- [ ] Save tasks to localStorage
-- [ ] Load safely on the client (no hydration mismatch)
-- [ ] Tests for save and load helpers
+- [x] Save tasks to localStorage
+- [x] Load safely on the client (no hydration mismatch)
+- [x] Tests for save and load helpers
 
 ### Day 11: Features and states
 - [ ] Search or filter
@@ -108,7 +108,7 @@
 | 7 | | | |
 | 8 | | | |
 | 9 | 2026-10-25 | Yes | KeyboardSensor and drag announcements, focus rings, aria-labels, live region for add and delete, focus to column heading after delete |
-| 10 | | | |
+| 10 | 2026-10-26 | Yes | localStorage save and load helpers, LOAD action, safe client load, silent announcer on load, 6 storage tests |
 | 11 | | | |
 | 12 | | | |
 | 13 | | | |

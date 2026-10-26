@@ -4,7 +4,8 @@ export type Action =
   | { type: "ADD"; id: string; title: string }
   | { type: "EDIT"; id: string; title: string }
   | { type: "DELETE"; id: string }
-  | { type: "MOVE"; id: string; status: Status };
+  | { type: "MOVE"; id: string; status: Status }
+  | { type: "LOAD"; tasks: Task[] };
 
 export function taskReducer(state: Task[], action: Action): Task[] {
   switch (action.type) {
@@ -24,5 +25,7 @@ export function taskReducer(state: Task[], action: Action): Task[] {
       return state.map((t) =>
         t.id === action.id ? { ...t, status: action.status } : t
       );
+        case "LOAD":
+      return action.tasks;
   }
 }

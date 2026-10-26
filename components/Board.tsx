@@ -28,11 +28,15 @@ function isStatus(id: unknown): id is Status {
 }
 
 export default function Board() {
-  const { tasks, dispatch } = useTasks();
+  const { tasks, dispatch, loaded } = useTasks();
 
 const [prevCount, setPrevCount] = useState(tasks.length);
 const [message, setMessage] = useState("");
-if (tasks.length !== prevCount) {
+const [prevLoaded, setPrevLoaded] = useState(loaded);
+if (loaded !== prevLoaded) {
+  setPrevLoaded(loaded);
+  setPrevCount(tasks.length);
+} else if (tasks.length !== prevCount) {
   setMessage(
     `${tasks.length > prevCount ? "Task added" : "Task deleted"}. ${tasks.length} tasks total.`
   );
