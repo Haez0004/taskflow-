@@ -11,7 +11,12 @@ interface ColumnProps {
   searching?: boolean;
 }
 
-export default function Column({ status, title, tasks, searching }: ColumnProps) {
+export default function Column({
+  status,
+  title,
+  tasks,
+  searching,
+}: ColumnProps) {
   const headingId = `column-${status}`;
   const { setNodeRef, isOver } = useDroppable({ id: status });
   return (
@@ -23,26 +28,29 @@ export default function Column({ status, title, tasks, searching }: ColumnProps)
       }`}
     >
       <h2
-  id={headingId}
-  tabIndex={-1}
-  className="text-lg font-semibold text-cyan-400 focus:outline-2 focus:outline-offset-2 focus:outline-cyan-400"
->
-  {title}
-  <span className="ml-2 rounded-full bg-navy-800 px-2 py-0.5 text-sm font-normal text-slate-300">
-    {tasks.length}
-  </span>
-</h2>
+        id={headingId}
+        tabIndex={-1}
+        className="text-lg font-semibold text-cyan-400 focus:outline-2 focus:outline-offset-2 focus:outline-cyan-400"
+      >
+        {title}{" "}
+        <span
+          aria-label={`${tasks.length} tasks`}
+          className="ml-2 rounded-full bg-navy-800 px-2 py-0.5 text-sm font-normal text-slate-300"
+        >
+          {tasks.length}
+        </span>
+      </h2>
       {tasks.length === 0 ? (
-  <p className="mt-3 text-sm text-slate-400">
-  {searching ? "No matching tasks." : "No tasks here yet."}
-</p>
-) : (
-  <ul className="mt-3 space-y-2">
-    {tasks.map((task) => (
-      <TaskCard key={task.id} task={task} />
-    ))}
-  </ul>
-)}
+        <p className="mt-3 text-sm text-slate-400">
+          {searching ? "No matching tasks." : "No tasks here yet."}
+        </p>
+      ) : (
+        <ul className="mt-3 space-y-2">
+          {tasks.map((task) => (
+            <TaskCard key={task.id} task={task} />
+          ))}
+        </ul>
+      )}
     </section>
   );
 }

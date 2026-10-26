@@ -81,10 +81,10 @@
 - [ ] A few component tests if time allows
 
 ### Day 13: Deploy and document
-- [ ] Deploy to Vercel
-- [ ] Write the README
-- [ ] Add screenshots
-- [ ] Add live link and repo link
+- [x] Deploy to Vercel
+- [x] Write the README
+- [x] Add screenshots
+- [x] Add live link and repo link
 
 ### Day 14: Showcase and buffer
 - [ ] Add TaskFlow to data/projects.ts
@@ -111,5 +111,5 @@
 | 10 | 2026-10-26 | Yes | localStorage save and load helpers, LOAD action, safe client load, silent announcer on load, 6 storage tests |
 | 11 | 2026-10-26 | Yes | Column counts, empty states, search with no-match message, theme color name, smooth drag highlight |
 | 12 | | | |
-| 13 | | | |
+| 13 | 2026-10-26 | Yes | Deployed to Vercel, README with live link, repo link and screenshot |
 | 14 | | | |
