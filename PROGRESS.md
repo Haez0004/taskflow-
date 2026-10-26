@@ -87,11 +87,11 @@
 - [x] Add live link and repo link
 
 ### Day 14: Showcase and buffer
-- [ ] Add TaskFlow to data/projects.ts
-- [ ] Update CV
-- [ ] Update LinkedIn
-- [ ] Update About page project count
-- [ ] Fix anything unfinished
+- [x] Add TaskFlow to data/projects.ts
+- [x] Update CV
+- [x] Update LinkedIn
+- [x] Update About page project count
+- [x] Fix anything unfinished
 
 ---
 
@@ -112,4 +112,4 @@
 | 11 | 2026-10-26 | Yes | Column counts, empty states, search with no-match message, theme color name, smooth drag highlight |
 | 12 | | | |
 | 13 | 2026-10-26 | Yes | Deployed to Vercel, README with live link, repo link and screenshot |
-| 14 | | | |
+| 14 | 2026-10-26 | Yes | TaskFlow added to portfolio projects and CV, LinkedIn updated |
